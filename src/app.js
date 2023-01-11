@@ -39,7 +39,7 @@ function renderPatty() {
   let patty = document.querySelector("#patty");
   //you can also use getElementById
   if (state.Patty) {
-    patty.style.display = "block";
+    patty.style.display = "inherit";
   } else {
     patty.style.display = "none";
   }
@@ -49,7 +49,7 @@ function renderCheese() {
   //Trial 1 - Change the visibility of cheese based on state by manipulating the DOM
   let cheese = document.querySelector("#cheese");
   if (state.Cheese) {
-      cheese.style.display = "block";
+      cheese.style.display = "inherit";
   } else {
       cheese.style.display = "none";
   }
@@ -58,9 +58,9 @@ function renderCheese() {
 
 function renderTomatoes() {
   //Trial 1 - Change the visibility of Tomatoes based on state by manipulating the DOM
-  let tomatoes = document.querySelector("#tomatoes");
+  let tomatoes = document.querySelector("#tomato");
   if (state.Tomatoes) {
-      tomatoes.style.display = "block";
+      tomatoes.style.display = "inherit";
   } else {
       tomatoes.style.display = "none";
   }
@@ -69,9 +69,9 @@ function renderTomatoes() {
 
 function renderOnions() {
   //Trial 1 - Change the visibility of Onions based on state by manipulating the DOM
-  let oninon = document.querySelector("#oninon");
-  if (state.Cheese) {
-      oninon.style.display = "block";
+  let oninon = document.querySelector("#onion");
+  if (state.Onions) {
+      oninon.style.display = "inherit";
   } else {
       oninon.style.display = "none";
   }
@@ -80,9 +80,9 @@ function renderOnions() {
 
 function renderLettuce() {
   //Trial 1 - Change the visibility of Lettuce based on state by manipulating the DOM
-  let lettuce = document.querySelector("#Lettuce");
+  let lettuce = document.querySelector("#lettuce");
   if (state.Lettuce) {
-      lettuce.style.display = "block";
+      lettuce.style.display = "inherit";
   } else {
       lettuce.style.display = "none";
   }
