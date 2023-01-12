@@ -31,7 +31,7 @@ function renderAll() {
   renderOnions();
   renderLettuce();
   renderButtons();
-  renderIngredientsBoard();
+ renderIngredientsBoard();
   renderPrice();
 }
 
@@ -82,7 +82,7 @@ function renderLettuce() {
   //Trial 1 - Change the visibility of Lettuce based on state by manipulating the DOM
   let lettuce = document.querySelector("#lettuce");
   if (state.Lettuce) {
-      lettuce.style.display = "inherit";
+      lettuce.style.display = "block";
   } else {
       lettuce.style.display = "none";
   }
@@ -122,7 +122,7 @@ document.querySelector(".btn-lettuce").onclick = function () {
 //Challenge 1 - Add/Remove the class active to the buttons based on state
 function renderButtons(){
   document.querySelectorAll(".button").forEach((elt) => {
-      if (state[elt.innerText]) {
+      if (state[elt.textContent]) {
           elt.classList.add("active");
       } else {
           elt.classList.remove("active");
@@ -131,15 +131,11 @@ function renderButtons(){
 }
 
 //Challenge 2 - Render only the items selected in the ingredients board based on the state
+var menu = document.querySelectorAll(".items")
 function renderIngredientsBoard(){
-  document.querySelectorAll(".items").forEach(elt=>{
-    if(!state[elt.innerText]){
-      elt.classList.add("hide")
-    }
-    else{
-      elt.classList.remove("hide");
-    }
-  })
+    menu.forEach(i=>{
+    state[i.textContent] ? i.style.display ="inherit" : i.style.display = "none"
+})
 }
 
 //Judgement 1
